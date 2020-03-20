@@ -17,6 +17,11 @@ class Alert extends Component {
         alert.error(`Email: ${error.message.email.join()}`);
       if (error.message.message)
         alert.error(`Message: ${error.message.message.join()}`);
+      if (error.message.non_field_errors)
+        alert.error(error.message.non_field_errors.join());
+      if (error.message.passwordsNotMatch)
+        alert.error(error.message.passwordsNotMatch);
+      if (error.message.username) alert.error(error.message.username.join());
     }
 
     if (message != prevProps.message) {
