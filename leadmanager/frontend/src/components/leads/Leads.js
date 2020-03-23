@@ -40,7 +40,7 @@ export class Leads extends Component {
                     className="btn red waves-effect waves-light"
                     onClick={this.props.deleteLead.bind(this, lead.id)}
                   >
-                    Delete
+                    <i class="fas fa-trash" style={{fontSize: '1rem'}}></i>
                   </button>
                 </td>
               </tr>
