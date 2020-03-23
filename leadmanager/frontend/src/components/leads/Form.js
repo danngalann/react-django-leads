@@ -30,41 +30,39 @@ export class Form extends Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <div className="card card-body mt-4 mb-4">
+      <div>
         <h2>Add Lead</h2>
         <form onSubmit={this.onSubmit}>
-          <div className="form-group">
+          <div className="input-field">
             <label>Name</label>
             <input
               type="text"
               name="name"
-              className="form-control"
               onChange={this.onChange}
               value={name}
             />
           </div>
-          <div className="form-group">
+          <div className="input-field">
             <label>Email</label>
             <input
               type="email"
               name="email"
               onChange={this.onChange}
               value={email}
-              className="form-control"
             />
           </div>
-          <div className="form-group">
+          <div className="input-field">
             <label>Message</label>
             <textarea
               type="text"
               name="message"
-              className="form-control"
               onChange={this.onChange}
               value={message}
+              className="materialize-textarea"
             ></textarea>
           </div>
-          <div className="form-group">
-            <button type="submit" className="btn btn-primary">
+          <div className="input-field">
+            <button type="submit" className="btn waves-effect waves-light indigo lighten-1">
               Submit
             </button>
           </div>

@@ -30,40 +30,41 @@ class Login extends Component {
 
     const { username, password } = this.state;
     return (
-      <div className="col-md-6 m-auto">
-        <div className="card card-body mt-5">
-          <h2 className="text-center">Login</h2>
-          <form onSubmit={this.onSubmit}>
-            <div className="form-group">
-              <label>Username</label>
-              <input
-                type="text"
-                className="form-control"
-                name="username"
-                onChange={this.onChange}
-                value={username}
-              />
-            </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input
-                type="password"
-                className="form-control"
-                name="password"
-                onChange={this.onChange}
-                value={password}
-              />
-            </div>
-            <div className="form-group">
-              <button type="submit" className="btn btn-primary">
-                Login
-              </button>
-            </div>
-            <p>
-              Don't have an account? <Link to="/register">Register</Link>
-            </p>
-          </form>
-        </div>
+      <div className="container">
+        <h2>Login</h2>
+        <form onSubmit={this.onSubmit}>
+          <div className="input-field">
+            <label>Username</label>
+            <input
+              type="text"
+              name="username"
+              onChange={this.onChange}
+              value={username}
+              required
+            />
+          </div>
+          <div className="input-field">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              onChange={this.onChange}
+              value={password}
+              required
+            />
+          </div>
+          <div className="input-field">
+            <button
+              type="submit"
+              className="btn waves-effect waves-light indigo lighten-1"
+            >
+              Login
+            </button>
+          </div>
+          <p>
+            Don't have an account? <Link to="/register">Register</Link>
+          </p>
+        </form>
       </div>
     );
   }

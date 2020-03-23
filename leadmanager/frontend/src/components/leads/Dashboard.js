@@ -4,7 +4,7 @@ import Leads from "./Leads";
 
 export default function Dashboard() {
   return (
-    <Fragment>
+    <Fragment className="container">
       <Form />
       <Leads />
     </Fragment>

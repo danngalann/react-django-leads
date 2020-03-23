@@ -18,7 +18,7 @@ export class Leads extends Component {
     return (
       <Fragment>
         <h2>Leads</h2>
-        <table className="table table-striped">
+        <table className="centered striped responsive-table">
           <thead>
             <tr>
               <th>ID</th>
@@ -37,7 +37,7 @@ export class Leads extends Component {
                 <td>{lead.message}</td>
                 <td>
                   <button
-                    className="btn btn-danger btn-sm"
+                    className="btn red waves-effect waves-light"
                     onClick={this.props.deleteLead.bind(this, lead.id)}
                   >
                     Delete
